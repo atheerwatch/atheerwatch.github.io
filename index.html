@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="هذه منصة Quanta Pc - كوانتا للكمبيوترات تتيح لك شراء اي شيء مختص باكسسوارات الكمبيوترات والساعات الذكية">
+    <title>Atheer - أثير</title>
+    <link rel="icon" href="icon.ico">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-bar" >
+        <div class="top-bar-buttons">
+            <a href="index.html" class="icon"><img src="atheer.png"></a>
+            <a href="" class="a">العروضات</a>
+            <a href="" class="a">الساعات الذكية</a>
+            <a href="" class="a">SKMEI</a>
+            <a href="" class="a">ساعات ديجيتال</a>
+            <a href="https://www.facebook.com/atheerWatch" class="face"><img src="facebook.png" alt=""></a>
+            <a href="https://www.instagram.com/atheer_watch/" class="ins"><img src="instagram.png" alt=""></a>
+            <a href="https://www.tiktok.com/@atheer_watch" class="tik"><img src="tiktok.png" alt=""></a>
+            <a href="https://t.me/quanta_pc_store" class="tel"><img src="telegram.png" alt=""></a>
+            <a href="https://wa.me/963952554712" class="what"><img src="whatsapp.png" alt=""></a>
+        </div>
+    </div>
+    <h1 class="h1" style="font-family: 'Cairo', sans-serif;font-size: 50px;">Atheer - أثير</h1>
+    <h2 style="font-family: Tajawal;">كل ما يتعلق بالساعات الذكية</h2>
+
+    <form>
+        <select name="search" class="srch">
+            <optgroup label="ساعات">
+                <option value="ساعات ذكية">ساعات ذكية</option>
+                <option value="ساعات مسلم">ساعات مسلم</option>
+                <option value="skmei">SKMEI</option>
+            </optgroup>
+        </select>
+        <input type="submit" class="sbmt" value="بحث">
+    </form>
+
+    <div class="products">
+  <!-- 1. منتج SKMEI (يسار) -->
+  <div class="watch product-card" id="skmei-card">
+    <div class="slideshow-container" id="skmei-slideshow">
+      <div class="skmeiSlides fade"><img src="products/SKMEI Analog watch 10.png" style="width:100%"></div>
+      <div class="skmeiSlides fade"><img src="products/SKMEI Analog watch 11.png" style="width:100%"></div>
+      <div class="skmeiSlides fade"><img src="products/SKMEI Analog watch 12.png" style="width:100%"></div>
+      
+      <a class="prev" onclick="plusSlides('skmei', -1)">&#10094;</a>
+      <a class="next" onclick="plusSlides('skmei', 1)">&#10095;</a>
+    </div>
+    <p>ساعة جديدة ماركة SKMEI 🔥🔥<br>متوفرة بسعر ممتاز وجنوني 🔥💀🔥</p>
+    <a class="iste" href="#">اطلب الان</a>
+  </div>
+
+  <!-- 2. فيديو ساعة مسلم (منتصف) -->
+  <div class="muslim product-card" id="muslim-card">
+    <video id="muslim-video" src="products/muslim.mp4" controls loop></video>
+    <p>ساعة مسلم الالكترونية وصلت 🔥😎🔥<br> متوفرة متى واين ما كنت 🔥🔥🔥<br> مع منبه صلاة لكل دول ومحافظات العالم 📿📿📿</p>
+    <a href="#">اطلب الان</a>
+  </div>
+
+  <!-- 3. منتج WR50M (يمين) -->
+  <div class="wr50m product-card" id="wr50m-card">
+    <div class="slideshow-container" id="wr50m-slideshow">
+      <div class="wrSlides fade"><img src="products/Wr50M yellow light watch.png" style="width:100%"></div>
+      <div class="wrSlides fade"><img src="products/WR50M Green Light watch.png" style="width:100%"></div>
+      <div class="wrSlides fade"><img src="products/WR50M Dark Watch.png" style="width:100%"></div>
+      <div class="wrSlides fade"><img src="products/WR50M Dark Light Watch.png" style="width:100%"></div>
+      
+      <a class="prev" onclick="plusSlides('wr', -1)">&#10094;</a>
+      <a class="next" onclick="plusSlides('wr', 1)">&#10095;</a>
+    </div>
+  </div>
+</div>
+    
+<script src="slides.js"></script>
+</body>
+</html>
