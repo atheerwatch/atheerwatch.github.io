@@ -83,8 +83,8 @@
     font-family: "Cairo", sans-serif;
     cursor: pointer;
     margin-top: 5px;
-    margin-left: 12px;
     margin-bottom: 5px;
+    margin-top: 75px;
     height: 50px;
     white-space: nowrap;
 }
@@ -167,7 +167,7 @@ h2{
     font-size: 20px;
     padding: 10px 10px 10px 72px;
     font-family: "Tajawal", sans-serif;
-    border: #3de0d8 5px solid;
+    border: #3de0d8 3px solid;
     border-radius: 20px;
 }
 .muslim{
@@ -181,10 +181,12 @@ h2{
     margin: 15px 30px 15px 55px ;
 }
 .muslim p{
-    border: #3eafdb solid 3px;
+    border: #3de0d8 solid 3px;
     border-radius: 20px;
     padding: 15px 15px 15px 15px ;
     margin: 15px 15px 15px 15px ;
+    font-family: "Tajawal" , sans-serif;
+    font-size: 18px;
 }
 .muslim a{
     display: inline-block;
@@ -209,7 +211,7 @@ h2{
 .wr50m img{
     border-radius: 100px;
     width: 400px;
-    margin: 15px 50px 15px 15px;
+    margin: 15px 175px 15px 15px;
 }
 .product-card {
   transition: opacity 0.4s ease, visibility 0.4s ease;
@@ -222,4 +224,28 @@ h2{
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.wr50m p{
+    border: #3de0d8 solid 3px;
+    border-radius: 20px;
+    padding:15px 15px 15px 55px ;
+    margin:15px 15px 15px 15px ;
+    font-family: "Tajawal", sans-serif;
+    font-size: 18px;
+}
+.iste2{
+    display: inline-block;
+    padding: 5px 125px;
+    background-color: #00ff15; 
+    color: black;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 25px;
+    font-family: "Cairo", sans-serif;
+    cursor: pointer;
+    margin-top: 125px;
+    margin-left: 80px;
+    margin-bottom: 15px;
+    height: 50px;
+    white-space: nowrap;
 }
