@@ -1,97 +1,156 @@
-.top-bar{
-    background-image: url("banner.png");
-    border-radius: 50px;
-    height: 768px;
-    width: 1375px;
-    margin: 0px 0px 0px 23px;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-.top-bar-buttons{
-    display: grid;
-    grid-template-columns: repeat(10,1fr);
-    gap: 10px;
-    padding-top: 625px;
-    padding-left: 50px;
-}
-.a{   
-    display: inline-block;
-    padding: 5px 15px;
-    background-color: #7bfff8; 
-    color: black;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 25px;
+body{
+    background: #222;
     font-family: "Cairo", sans-serif;
-    cursor: pointer;
-    margin-top: 20px;
-    height: 50px;
-    white-space: nowrap;
+    color: #fff;
 }
-.a:hover{
-       background-color: #3de0d8;  
+.top-bar{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+.top-bar a{
+    position: relative;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.4s ease;
 }
 
-.face img{
-    border-radius: 20px;
-    width: 50px;
+.top-bar a::before{
+    content: ""; 
+    position: absolute;
+    inset: 0;
+    background: #0ff;
+    opacity: 0;
+    transform: scale(0.5);
+    border-radius: inherit;
+    transition: 0.4s ease;
+    z-index: -1;
 }
-.ins img{
-    border-radius: 20px;
-    width: 50px;
+.top-bar a:hover{
+    color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 0  10px #0ff , 0 0  25px #0ff 
+    , 0 0 50px rgba(0, 255, 255, 0.4);
 }
-.tik img{
-    border-radius: 20px;
-    width: 50px;
+.top-bar a:hover::before{
+    opacity: 1;
+    transform: scale(1);
 }
-.tel img{
-    border-radius: 20px;
-    width: 50px;
+.top-bar a:hover::after{
+    width: 70%;
 }
-.what img{
-    border-radius: 20px;
-    width: 50px;
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 125px;
+    margin-top: 50px; 
+}
+.social img{
+    width: 75px;
+    border-radius: 25px;
+}
+.social a{
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: 0.4s ease;
+    width: 75px;
+    height: 75px;
+}
+.social a:hover{
+    color: #000;
+    transform: translateY(-10px);
+    box-shadow: 0 0  10px #0ff , 0 0  25px #0ff 
+    , 0 0 50px rgba(0, 255, 255, 0.4);
 }
 .icon img{
-    border-radius: 20px;
+    border-radius: 18px;
     width: 100px;
 }
 .h1{
     margin-left: 575px;
-    color: #000000;
+    color: #fff;
 }
 .products{
     display: flex;
-    border: solid 5px #00ff15;
+    border: solid 5px #0ff;
     border-radius: 50px;
     margin-top: 10px;
     padding: 10px 10px 10px 10px;
     gap: 10px;
 }
 .watch{
-    border: #00ff15 solid 5px;
+    border: #0ff solid 5px;
     border-radius: 50px;
     padding: 50px 50px 50px 50px;
-    width: 27%;
+    width: 33%;
 }
 .iste{
     display: inline-block;
-    padding: 5px 125px;
-    background-color: #00ff15; 
+    padding: 0px 125px;
+    background-color: #0ff; 
     color: black;
     text-decoration: none;
     border-radius: 50px;
     font-size: 25px;
     font-family: "Cairo", sans-serif;
     cursor: pointer;
-    margin-top: 5px;
     margin-bottom: 5px;
     margin-top: 75px;
     height: 50px;
     white-space: nowrap;
+    transition: 0.4s ease;
+    overflow: hidden;
+    position: relative;
+}
+.iste::before{
+    content: ""; 
+    position: relative;
+    inset: 0;
+    background: #0ff;
+    opacity: 0;
+    transform: scale(0.5);
+    border-radius: inherit;
+    transition: 0.4s ease;
+    z-index: -1
 }
 .iste:hover{
-    background-color: #12c940;
+    transform: translateY(-5px);
+    box-shadow: 0 0  10px #0ff , 0 0  25px #0ff 
+    , 0 0 50px rgba(0, 255, 255, 0.4); 
+}
+.iste:hover::before{
+    opacity: 1;
+    transform: scale(1);
+}
+.iste::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg); /* Işığı eğik yapar */
+  transition: 0.7s;
+}
+.iste:hover::after {
+  left: 125%;
 }
 h2{
+    margin-top: 35px;
+    margin-bottom: 10px;
     margin-left: 550px;
 }
 .srch, .sbmt{
@@ -100,7 +159,8 @@ h2{
     border-radius: 10px;
     width: 200px;
     height: 50px;
-    font-family: Tajawal;
+    font-family: "Tajawal";
+    margin: 15px 0 15px 0;
 }
 .srch{
     margin-left: 35%;
@@ -171,14 +231,16 @@ h2{
     border-radius: 20px;
 }
 .muslim{
-    border: #00ff15 solid 5px;
+    border: #0ff solid 5px;
     border-radius: 50px;
+    width: 33%;
 }
 
 .muslim video{
     height: 500px;
     border-radius: 50px;
-    margin: 15px 30px 15px 55px ;
+    margin: 15px 75px 15px 55px ;
+    padding-left: 35px;
 }
 .muslim p{
     border: #3de0d8 solid 3px;
@@ -190,8 +252,8 @@ h2{
 }
 .muslim a{
     display: inline-block;
-    padding: 5px 125px;
-    background-color: #00ff15; 
+    padding: 0px 125px;
+    background-color: #0ff; 
     color: black;
     text-decoration: none;
     border-radius: 50px;
@@ -199,19 +261,57 @@ h2{
     font-family: "Cairo", sans-serif;
     cursor: pointer;
     margin-top: 5px;
-    margin-left: 12px;
+    margin-left: 50px;
     margin-bottom: 15px;
     height: 50px;
     white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+.muslim a::before{
+    content: ""; 
+    position: relative;
+    inset: 0;
+    background: #0ff;
+    opacity: 0;
+    transform: scale(0.5);
+    border-radius: inherit;
+    transition: 0.4s ease;
+    z-index: -1
+}
+.muslim a:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0  10px #0ff , 0 0  25px #0ff 
+    , 0 0 50px rgba(0, 255, 255, 0.4);
+}
+.muslim a:hover::before{
+    opacity: 1;
+    transform: scale(1);
+}
+.muslim a::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg); /* Işığı eğik yapar */
+    transition: 0.7s;
+}
+.muslim a:hover::after {
+  left: 125%;
 }
 .wr50m{
-    border: #00ff15 solid 5px;
+    border: #0ff solid 5px;
     border-radius: 50px;
+    width: 33%;
 }
 .wr50m img{
     border-radius: 100px;
     width: 400px;
-    margin: 15px 175px 15px 15px;
+    
 }
 .product-card {
   transition: opacity 0.4s ease, visibility 0.4s ease;
@@ -235,8 +335,8 @@ h2{
 }
 .iste2{
     display: inline-block;
-    padding: 5px 125px;
-    background-color: #00ff15; 
+    padding: 0px 125px;
+    background-color: #0ff; 
     color: black;
     text-decoration: none;
     border-radius: 50px;
@@ -244,8 +344,45 @@ h2{
     font-family: "Cairo", sans-serif;
     cursor: pointer;
     margin-top: 125px;
-    margin-left: 80px;
+    margin-left: 50px;
     margin-bottom: 15px;
     height: 50px;
     white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+.iste2::before{
+    content: ""; 
+    position: relative;
+    inset: 0;
+    background: #0ff;
+    opacity: 0;
+    transform: scale(0.5);
+    border-radius: inherit;
+    transition: 0.4s ease;
+    z-index: -1
+}
+.iste2:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0  10px #0ff , 0 0  25px #0ff 
+    , 0 0 50px rgba(0, 255, 255, 0.4); 
+}
+.iste2:hover::before{
+    opacity: 1;
+    transform: scale(1);
+}
+.iste2::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg); /* Işığı eğik yapar */
+  transition: 0.7s;
+}
+.iste2:hover::after {
+  left: 125%;
 }
